@@ -7,13 +7,13 @@ function Signup() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState('');
-    const [loading, setLoading] = useState(false); // new state
+    const [loading, setLoading] = useState(false); 
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
-        setLoading(true); // start loading
+        setLoading(true); 
         try {
             await axios.post(
                 'https://loginauth-ix8k.onrender.com/api/auth/signup',
@@ -24,7 +24,7 @@ function Signup() {
         } catch (err) {
             setError(err.response?.data?.message || 'Signup failed');
         } finally {
-            setLoading(false); // stop loading
+            setLoading(false); 
         }
     };
 

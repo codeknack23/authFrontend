@@ -7,7 +7,7 @@ function Dashboard() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        axios.get('http://localhost:5000/api/auth/dashboard', { withCredentials: true })
+        axios.get('https://loginauth-ix8k.onrender.com/api/auth/dashboard', { withCredentials: true })
             .then(res => setUser(res.data.user))
             .catch(() => navigate('/login'));
     }, [navigate]);

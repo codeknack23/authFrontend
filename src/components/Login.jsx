@@ -19,7 +19,7 @@ function Login() {
                 { email, password },
                 { withCredentials: true }
             );
-            alert('Logged in');
+            
             navigate('/dashboard');
         } catch (err) {
             setError(err.response?.data?.message || 'Login failed');

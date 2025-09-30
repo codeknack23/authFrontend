@@ -7,66 +7,10 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
+    flex-direction: column; /* so navbar stays on top, form below */
 }
 
-form {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    max-width: 400px;
-    width: 100%;
-}
-
-input {
-    width: 100%;
-    padding: 12px 15px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-button {
-    width: 100%;
-    padding: 12px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
-
-nav {
-    margin-bottom: 20px;
-}
-
-nav a {
-    margin: 0 15px;
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.dashboard {
-    text-align: center;
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-/* Navbar styles */
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
@@ -98,7 +42,51 @@ h1 {
     border-bottom: 2px solid #ffeb3b;
 }
 
-/* Push main content below navbar */
-main {
-    margin-top: 80px;
+/* Center the form under navbar */
+form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    margin-top: 100px; /* push down below navbar */
+}
+
+input {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.dashboard {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }

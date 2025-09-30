@@ -13,7 +13,7 @@ function Dashboard() {
     }, [navigate]);
 
     const handleLogout = async () => {
-        await axios.post('http://localhost:5000/api/auth/logout', {}, { withCredentials: true });
+        await axios.post('https://loginauth-ix8k.onrender.com/api/auth/logout', {}, { withCredentials: true });
         setUser(null);
         navigate('/login');
     };

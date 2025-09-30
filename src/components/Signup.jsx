@@ -12,7 +12,7 @@ function Signup() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/auth/signup', { name, email, password });
+            await axios.post('https://loginauth-ix8k.onrender.com/api/auth/signup', { name, email, password });
             alert('Signup successful');
             navigate('/login');
         } catch (err) {

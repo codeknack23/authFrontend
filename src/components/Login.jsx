@@ -11,7 +11,7 @@ function Login() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            await axios.post('http://localhost:5000/api/auth/login', { email, password }, { withCredentials: true });
+            await axios.post('https://loginauth-ix8k.onrender.com/api/auth/login', { email, password }, { withCredentials: true });
             alert('Logged in');
             navigate('/dashboard');
         } catch (err) {
